@@ -1,3 +1,4 @@
 FROM drakkan/sftpgo:latest
-COPY sftpgo.json /etc/sftpgo/sftpgo.json
-ENTRYPOINT ["sftpgo", "serve", "--config-file=/etc/sftpgo/sftpgo.json"]
+WORKDIR /app
+COPY sftpgo.json /app/config/sftpgo.json
+ENTRYPOINT ["sftpgo", "serve", "--config-file=/app/config/sftpgo.json"]
