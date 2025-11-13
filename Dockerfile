@@ -1,2 +1,3 @@
 FROM drakkan/sftpgo:latest
-ENTRYPOINT ["sftpgo", "serve", "--config-file=/dev/null"]
+COPY sftpgo.json /etc/sftpgo/sftpgo.json
+ENTRYPOINT ["sftpgo", "serve", "--config-file=/etc/sftpgo/sftpgo.json"]
