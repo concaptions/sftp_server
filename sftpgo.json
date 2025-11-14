@@ -10,7 +10,12 @@
     "bucket": "sftp-storage",
     "access_key": "XD0xufCmIT1VzAnyHE96",
     "secret_key": "zuvoKxbpfWW2Vy6bqb1zXiaoY9PaBmJJjG5lhtIm",
-    "region": "us-east-1"
+    "region": "us-east-1",
+    "host": "",         // <--- NEW! Explicitly empty
+    "port": 0,          // <--- NEW! Explicitly zero
+    "username": "",     // <--- NEW! Explicitly empty
+    "password": "",     // <--- NEW! Explicitly empty
+    "ssl_mode": 0       // <--- NEW! Explicitly zero (assuming 0 is 'disable' or 'none')
   },
   "sftpd": {
     "bindings": [
